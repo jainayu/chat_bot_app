@@ -1,4 +1,4 @@
-import 'package:chat_bot_app/screens/home_screen/chat_tab/chat_bubble.dart';
+import 'package:chat_bot_app/screens/home_screen/chat_tab/ui/chat_bubble.dart';
 import 'package:flutter/material.dart';
 
 class ChatTab extends StatefulWidget {
@@ -26,7 +26,8 @@ class _ChatTabState extends State<ChatTab> {
                 child: CircularProgressIndicator(
                   backgroundColor: Colors.deepPurple,
                   valueColor: new AlwaysStoppedAnimation<Color>(
-                      Colors.deepPurpleAccent),
+                    Colors.deepPurpleAccent,
+                  ),
                   strokeWidth: 5.0,
                 ),
               ),

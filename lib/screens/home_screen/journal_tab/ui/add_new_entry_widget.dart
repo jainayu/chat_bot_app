@@ -12,7 +12,7 @@ class AddNewEntryWidget extends StatelessWidget {
           borderRadius: BorderRadius.circular(20),
           boxShadow: [
             BoxShadow(
-              color: Colors.blue[800],
+              color: Colors.deepPurple,
               blurRadius: 5.0,
             ),
           ],
@@ -24,7 +24,7 @@ class AddNewEntryWidget extends StatelessWidget {
             children: [
               Icon(
                 Icons.add_sharp,
-                color: Colors.blue[800],
+                color: Colors.deepPurple,
                 size: 30,
               ),
               SizedBox(
@@ -33,7 +33,7 @@ class AddNewEntryWidget extends StatelessWidget {
               Text(
                 'Add new entry',
                 style: TextStyle(
-                  color: Colors.blue[800],
+                  color: Colors.deepPurple,
                   fontSize: 20.0,
                   fontWeight: FontWeight.w400,
                 ),
