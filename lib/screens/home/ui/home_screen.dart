@@ -1,3 +1,4 @@
+import 'package:chat_bot_app/screens/home/chat_tab/chat_bubble.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -11,36 +12,35 @@ class _HomeScreenState extends State<HomeScreen> {
   static const TextStyle optionStyle =
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   List<Widget> _widgetOptions = <Widget>[
-    Center(
+    Container(
+      padding: EdgeInsets.symmetric(vertical: 16, horizontal: 0),
       child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          SizedBox(
-            height: 150.0,
-            width: 150.0,
-            child: CircularProgressIndicator(
-              backgroundColor: Colors.deepPurple,
-              valueColor:
-                  new AlwaysStoppedAnimation<Color>(Colors.deepPurpleAccent),
-              strokeWidth: 8.0,
+          Hero(
+            tag: 'animation',
+            child: SizedBox(
+              height: 50.0,
+              width: 50.0,
+              child: CircularProgressIndicator(
+                backgroundColor: Colors.deepPurple,
+                valueColor:
+                    new AlwaysStoppedAnimation<Color>(Colors.deepPurpleAccent),
+                strokeWidth: 5.0,
+              ),
             ),
           ),
-          SizedBox(
-            height: 20,
+          ChatBubble(
+            text: 'Hello',
+            isMe: false,
           ),
-          Text(
-            'Hello !!',
-            style: TextStyle(
-              fontSize: 30,
-              fontWeight: FontWeight.w500,
-            ),
-          )
         ],
       ),
     ),
-    Text(
-      'Journal',
-      style: optionStyle,
+    Center(
+      child: Text(
+        'Journal',
+        style: optionStyle,
+      ),
     ),
   ];
 
@@ -54,9 +54,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        body: Center(
-          child: _widgetOptions.elementAt(_selectedIndex),
-        ),
+        body: _widgetOptions.elementAt(_selectedIndex),
         bottomNavigationBar: BottomNavigationBar(
           items: const <BottomNavigationBarItem>[
             BottomNavigationBarItem(
