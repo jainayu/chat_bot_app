@@ -1,4 +1,5 @@
-import 'package:chat_bot_app/screens/home/chat_tab/chat_bubble.dart';
+import 'package:chat_bot_app/screens/home_screen/chat_tab/ui/chat_tab.dart';
+import 'package:chat_bot_app/screens/home_screen/journal_tab/ui/journal_tab.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -8,40 +9,12 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  int _selectedIndex = 0;
+  int _selectedIndex = 1;
   static const TextStyle optionStyle =
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   List<Widget> _widgetOptions = <Widget>[
-    Container(
-      padding: EdgeInsets.symmetric(vertical: 16, horizontal: 0),
-      child: Column(
-        children: [
-          Hero(
-            tag: 'animation',
-            child: SizedBox(
-              height: 50.0,
-              width: 50.0,
-              child: CircularProgressIndicator(
-                backgroundColor: Colors.deepPurple,
-                valueColor:
-                    new AlwaysStoppedAnimation<Color>(Colors.deepPurpleAccent),
-                strokeWidth: 5.0,
-              ),
-            ),
-          ),
-          ChatBubble(
-            text: 'Hello',
-            isMe: false,
-          ),
-        ],
-      ),
-    ),
-    Center(
-      child: Text(
-        'Journal',
-        style: optionStyle,
-      ),
-    ),
+    ChatTab(),
+    JournalTab(),
   ];
 
   void _onItemTapped(int index) {

@@ -1,4 +1,4 @@
-import 'package:chat_bot_app/screens/home/ui/home_screen.dart';
+import 'package:chat_bot_app/screens/home_screen/ui/home_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
