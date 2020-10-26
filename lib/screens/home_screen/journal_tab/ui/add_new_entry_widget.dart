@@ -6,7 +6,7 @@ class AddNewEntryWidget extends StatelessWidget {
     return GestureDetector(
       onTap: () {},
       child: Container(
-        height: 100,
+        height: 68,
         decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.circular(20),

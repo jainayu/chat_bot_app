@@ -15,7 +15,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Chat Bot',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.deepPurple,
+        accentColor: Colors.deepPurpleAccent,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       debugShowCheckedModeBanner: false,
