@@ -1,10 +1,23 @@
+import 'package:chat_bot_app/screens/home_screen/journal_tab/ui/add_new_entry_bottom_sheet.dart';
 import 'package:flutter/material.dart';
 
-class AddNewEntryWidget extends StatelessWidget {
+class AddNewEntryButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {},
+      onTap: () {
+        showModalBottomSheet(
+          context: context,
+          isScrollControlled: true,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.vertical(
+              top: Radius.circular(25.0),
+            ),
+          ),
+          backgroundColor: Colors.white,
+          builder: (context) => AddNewEntryBottomSheet(),
+        );
+      },
       child: Container(
         height: 68,
         decoration: BoxDecoration(
