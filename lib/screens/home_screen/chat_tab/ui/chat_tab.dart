@@ -15,7 +15,7 @@ class _ChatTabState extends State<ChatTab> {
         padding: EdgeInsets.symmetric(vertical: 16.0, horizontal: 8.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
-          mainAxisAlignment: MainAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.center,
           mainAxisSize: MainAxisSize.min,
           children: [
             Hero(
